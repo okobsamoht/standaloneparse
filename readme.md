@@ -1,5 +1,14 @@
 # utilisation de parse
 
+## utilisation de ce projet
+- cloner le depot `git clone https://github.com/okobsamoht/standaloneparse.git`
+- installer les dependances `npm install` ou `yarn install`
+- demarrer l'instance de parse server  + dashboard `npm run start` ou `yarn start`
+
+le endpoint principale de parse tourne sur le route `http://127.0.0.1:3000/api`
+pour verifier si tout va bien utiliser votre avigateur pour aller a l'addresse `http://127.0.0.1:3000/api/health`
+vous devez voir ```{ status: "ok"}```
+
 ## dans une app client qui tourne avec nodejs
 - installer parse client: `npm install parse`
 - inclure dans le projet: `import Parse from 'parse'`
