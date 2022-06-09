@@ -9,11 +9,13 @@ var api = new ParseServer({
     masterKey: "MASTER_KEY",
     directAccess: true,
     enforcePrivateUsers: true,
-    // databaseURI: 'postgres://localhost:5432/db?ssl=true&rejectUnauthorized=false', // url de connexion a la bdd
+    // databaseURI: 'postgres://localhost:5432/db', // url de connexion a la bdd postgres
+    // databaseURI: 'mongodb://localhost:27017/db', // url de connexion a la bdd mongo
     port: 3000,
     mountPath: '/api',
     serverStartComplete: () => console.log('parse server started'),
-    serverCloseComplete: () => console.log('parse server closed')
+    serverCloseComplete: () => console.log('parse server closed'),
+    cloud:'cloudCode'
 });
 
 var options = {allowInsecureHTTP: false};
