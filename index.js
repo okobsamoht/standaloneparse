@@ -9,6 +9,7 @@ var api = new ParseServer({
     masterKey: "masterKey",
     directAccess: true,
     enforcePrivateUsers: true,
+    allowClientClassCreation: true,
     // databaseURI: 'postgres://localhost:5432/db', // url de connexion a la bdd postgres
     databaseURI: 'mongodb://localhost:27017/db', // url de connexion a la bdd mongo
     port: 7331,
@@ -23,7 +24,7 @@ var options = {allowInsecureHTTP: false};
 var dashboard = new ParseDashboard({
         "apps": [
             {
-                "serverURL": "http://localhost:3000/api",
+                "serverURL": "http://localhost:7331/api",
                 "appId": "appId",
                 "masterKey": "masterKey",
                 "appName": "appName"
