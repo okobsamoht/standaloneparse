@@ -35,8 +35,9 @@ var dashboard = new ParseDashboard({
 
 var app = express();
 
+api.start().then(console.log).catch(console.log);
 // parse server
-app.use('/api', api);
+app.use('/api', api.app);
 
 // parse dashboard
 app.use('/dashboard', dashboard);
